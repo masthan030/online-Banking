@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Application Opened]]>
+    </line>
+    <line>
+      <![CDATA[Login Completed]]>
+    </line>
+    <line>
+      <![CDATA[Logout Completed]]>
+    </line>
+    <line>
+      <![CDATA[Application Closed]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-03-29T13:52:51Z" name="Default suite" finished-at="2023-03-29T13:53:05Z" duration-ms="13996">
+    <groups>
+    </groups>
+    <test started-at="2023-03-29T13:52:51Z" name="Default test" finished-at="2023-03-29T13:53:05Z" duration-ms="13996">
+      <class name="com.oib.automation.TC001_AdminLogin">
+        <test-method signature="login()[pri:0, instance:com.oib.automation.TC001_AdminLogin@3f57bcad]" started-at="2023-03-29T19:22:51Z" name="login" finished-at="2023-03-29T19:23:05Z" duration-ms="13981" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Application Opened]]>
+            </line>
+            <line>
+              <![CDATA[Login Completed]]>
+            </line>
+            <line>
+              <![CDATA[Logout Completed]]>
+            </line>
+            <line>
+              <![CDATA[Application Closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- com.oib.automation.TC001_AdminLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

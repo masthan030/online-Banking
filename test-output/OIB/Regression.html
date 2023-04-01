@@ -1,0 +1,861 @@
+<html>
+<head>
+<title>TestNG:  Regression</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>23/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Mar 03 15:33:54 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>671 seconds (671856 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.oib.automation.TC004_AdminAccTypes.acctype()'><b>acctype</b><br>Test class: com.oib.automation.TC004_AdminAccTypes<br/>
+<a href="#Output-235154585" onClick='toggleBox("Output-235154585", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-235154585" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-235154585">
+Application Opened<br/>
+Login Completed<br/>
+Account type Register Successfull<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Logout&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be8e98394f89d5163f11aaaa82b5c20d, findElement {using=link text, value=Logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\masth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56061}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56061/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: be8e98394f89d5163f11aaaa82b5c20d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.oib.lib.CommonFunctions.logout(CommonFunctions.java:70)
+	at com.oib.automation.TC004_AdminAccTypes.acctype(TC004_AdminAccTypes.java:28)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace235154585", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace235154585'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Logout&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be8e98394f89d5163f11aaaa82b5c20d, findElement {using=link text, value=Logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\masth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56061}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56061/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: be8e98394f89d5163f11aaaa82b5c20d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.oib.lib.CommonFunctions.logout(CommonFunctions.java:70)
+	at com.oib.automation.TC004_AdminAccTypes.acctype(TC004_AdminAccTypes.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>38</td>
+<td>com.oib.automation.TC004_AdminAccTypes@355ce81c</td></tr>
+<tr>
+<td title='com.oib.automation.TC012_Admin_BranchServices_Reg.branchreg()'><b>branchreg</b><br>Test class: com.oib.automation.TC012_Admin_BranchServices_Reg<br/>
+<a href="#Output-1024478363" onClick='toggleBox("Output-1024478363", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1024478363" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1024478363">
+Application Opened<br/>
+Login Completed<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 0
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:301)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:176)
+	at com.oib.lib.CommonFunctions.branchServices_reg(CommonFunctions.java:366)
+	at com.oib.automation.TC012_Admin_BranchServices_Reg.branchreg(TC012_Admin_BranchServices_Reg.java:25)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1024478363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1024478363'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 0
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:301)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:176)
+	at com.oib.lib.CommonFunctions.branchServices_reg(CommonFunctions.java:366)
+	at com.oib.automation.TC012_Admin_BranchServices_Reg.branchreg(TC012_Admin_BranchServices_Reg.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>18</td>
+<td>com.oib.automation.TC012_Admin_BranchServices_Reg@52102734</td></tr>
+<tr>
+<td title='com.oib.automation.TC_Admin_RetrieveData_ViewBranch.retrieve_data()'><b>retrieve_data</b><br>Test class: com.oib.automation.TC_Admin_RetrieveData_ViewBranch<br/>
+<a href="#Output-580668724" onClick='toggleBox("Output-580668724", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-580668724" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-580668724">
+Application Opened<br/>
+Login Completed<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/table/tbody/tr/td/table[3]/tbody/tr/td/center/h3/form/table/tbody/tr[12]/td[3]/span&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4fc4491367b6fccabc7006cb74d73df4, findElement {using=xpath, value=/html/body/table/tbody/tr/td/table[3]/tbody/tr/td/center/h3/form/table/tbody/tr[12]/td[3]/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\masth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58354}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58354/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4fc4491367b6fccabc7006cb74d73df4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.oib.lib.CommonFunctions.retrieve_data(CommonFunctions.java:951)
+	at com.oib.automation.TC_Admin_RetrieveData_ViewBranch.retrieve_data(TC_Admin_RetrieveData_ViewBranch.java:26)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace580668724", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace580668724'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/table/tbody/tr/td/table[3]/tbody/tr/td/center/h3/form/table/tbody/tr[12]/td[3]/span&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4fc4491367b6fccabc7006cb74d73df4, findElement {using=xpath, value=/html/body/table/tbody/tr/td/table[3]/tbody/tr/td/center/h3/form/table/tbody/tr[12]/td[3]/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\masth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58354}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58354/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4fc4491367b6fccabc7006cb74d73df4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.oib.lib.CommonFunctions.retrieve_data(CommonFunctions.java:951)
+	at com.oib.automation.TC_Admin_RetrieveData_ViewBranch.retrieve_data(TC_Admin_RetrieveData_ViewBranch.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>18</td>
+<td>com.oib.automation.TC_Admin_RetrieveData_ViewBranch@865dd6</td></tr>
+<tr>
+<td title='com.oib.automation.TC009_Admin_ServiceReg.servicereg()'><b>servicereg</b><br>Test class: com.oib.automation.TC009_Admin_ServiceReg<br/>
+<a href="#Output-277155095" onClick='toggleBox("Output-277155095", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-277155095" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-277155095">
+Application Opened<br/>
+Login Completed<br/>
+Service Registration Succesfull<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Logout&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9740f2c36faac30f4c588e1348849ec2, findElement {using=link text, value=Logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\masth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56382}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56382/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9740f2c36faac30f4c588e1348849ec2
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.oib.lib.CommonFunctions.logout(CommonFunctions.java:70)
+	at com.oib.automation.TC009_Admin_ServiceReg.servicereg(TC009_Admin_ServiceReg.java:26)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace277155095", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace277155095'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Logout&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9740f2c36faac30f4c588e1348849ec2, findElement {using=link text, value=Logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\masth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56382}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56382/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9740f2c36faac30f4c588e1348849ec2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.oib.lib.CommonFunctions.logout(CommonFunctions.java:70)
+	at com.oib.automation.TC009_Admin_ServiceReg.servicereg(TC009_Admin_ServiceReg.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>24</td>
+<td>com.oib.automation.TC009_Admin_ServiceReg@1649b0e6</td></tr>
+<tr>
+<td title='com.oib.automation.TC021_Admin_Profile.view_profile()'><b>view_profile</b><br>Test class: com.oib.automation.TC021_Admin_Profile<br/>
+<a href="#Output-1895167357" onClick='toggleBox("Output-1895167357", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1895167357" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1895167357">
+Application Opened<br/>
+Login Completed<br/>
+View Profile Opened<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Logout&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c70ca7b240bf56645cb43d9dac7655dc, findElement {using=link text, value=Logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\masth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57636}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57636/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c70ca7b240bf56645cb43d9dac7655dc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.oib.lib.CommonFunctions.logout(CommonFunctions.java:70)
+	at com.oib.automation.TC021_Admin_Profile.view_profile(TC021_Admin_Profile.java:27)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1895167357", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1895167357'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Logout&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-3OF9PN3&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c70ca7b240bf56645cb43d9dac7655dc, findElement {using=link text, value=Logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\masth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57636}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57636/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c70ca7b240bf56645cb43d9dac7655dc
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.oib.lib.CommonFunctions.logout(CommonFunctions.java:70)
+	at com.oib.automation.TC021_Admin_Profile.view_profile(TC021_Admin_Profile.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>15</td>
+<td>com.oib.automation.TC021_Admin_Profile@306cf3ea</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.oib.automation.TC014_Admin_RetrieveAllLinks.alllinks()'><b>alllinks</b><br>Test class: com.oib.automation.TC014_Admin_RetrieveAllLinks<br/>
+<a href="#Output-61852204" onClick='toggleBox("Output-61852204", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-61852204" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-61852204">
+Application Opened<br/>
+Login Completed<br/>
+[[ChromeDriver: chrome on WINDOWS (c715b14c10f97f73505faa70ed78d447)] -> tag name: a]http://183.82.103.245:8888/BankingProject/AdminHomeBuild1.jsp<br/>
+[[ChromeDriver: chrome on WINDOWS (c715b14c10f97f73505faa70ed78d447)] -> tag name: a]http://183.82.103.245:8888/BankingProject/loginActionBuild1.do#<br/>
+[[ChromeDriver: chrome on WINDOWS (c715b14c10f97f73505faa70ed78d447)] -> tag name: a]http://183.82.103.245:8888/BankingProject/loginActionBuild1.do#<br/>
+[[ChromeDriver: chrome on WINDOWS (c715b14c10f97f73505faa70ed78d447)] -> tag name: a]http://183.82.103.245:8888/BankingProject/loginActionBuild1.do#<br/>
+[[ChromeDriver: chrome on WINDOWS (c715b14c10f97f73505faa70ed78d447)] -> tag name: a]http://183.82.103.245:8888/BankingProject/loginActionBuild1.do#<br/>
+[[ChromeDriver: chrome on WINDOWS (c715b14c10f97f73505faa70ed78d447)] -> tag name: a]http://183.82.103.245:8888/BankingProject/loginActionBuild1.do#<br/>
+[[ChromeDriver: chrome on WINDOWS (c715b14c10f97f73505faa70ed78d447)] -> tag name: a]http://183.82.103.245:8888/BankingProject/LogoutAction.jsp<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>com.oib.automation.TC014_Admin_RetrieveAllLinks@1bb266b3</td></tr>
+<tr>
+<td title='com.oib.automation.TC007_Admin_BranchAccounts.branchacc()'><b>branchacc</b><br>Test class: com.oib.automation.TC007_Admin_BranchAccounts<br/>
+<a href="#Output-1975171943" onClick='toggleBox("Output-1975171943", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1975171943" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1975171943">
+Application Opened<br/>
+Login Completed<br/>
+Branch Account type Registeration Success<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.oib.automation.TC007_Admin_BranchAccounts@13b13b5d</td></tr>
+<tr>
+<td title='com.oib.automation.TC003_AdminBranch_Reg.branchreg()'><b>branchreg</b><br>Test class: com.oib.automation.TC003_AdminBranch_Reg<br/>
+<a href="#Output-572370257" onClick='toggleBox("Output-572370257", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-572370257" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-572370257">
+Application Opened<br/>
+Login Completed<br/>
+Branch Registration Succesfull<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.oib.automation.TC003_AdminBranch_Reg@40cb8df7</td></tr>
+<tr>
+<td title='com.oib.automation.TC002_AdminClear.clear()'><b>clear</b><br>Test class: com.oib.automation.TC002_AdminClear<br/>
+<a href="#Output-13001549" onClick='toggleBox("Output-13001549", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-13001549" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-13001549">
+Application Opened<br/>
+Data is Cleared<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>com.oib.automation.TC002_AdminClear@4e268090</td></tr>
+<tr>
+<td title='com.oib.automation.TC027_Employee_CustomerReg.cust_reg()'><b>cust_reg</b><br>Test class: com.oib.automation.TC027_Employee_CustomerReg<br/>
+<a href="#Output-235460721" onClick='toggleBox("Output-235460721", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-235460721" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-235460721">
+Application Opened<br/>
+Login Completed<br/>
+Customer Details Registered<br/>
+Test Case Pass<br/>
+rgba(255, 0, 0, 1)<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>68</td>
+<td>com.oib.automation.TC027_Employee_CustomerReg@2beee7ff</td></tr>
+<tr>
+<td title='com.oib.automation.TC020_Admin_ViewCustomer_Transactions.customer_transaction()'><b>customer_transaction</b><br>Test class: com.oib.automation.TC020_Admin_ViewCustomer_Transactions<br/>
+<a href="#Output-342862272" onClick='toggleBox("Output-342862272", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-342862272" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-342862272">
+Application Opened<br/>
+Login Completed<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>com.oib.automation.TC020_Admin_ViewCustomer_Transactions@5fa07e12</td></tr>
+<tr>
+<td title='com.oib.automation.TC015_Admin_EmployeeReg.emp_reg()'><b>emp_reg</b><br>Test class: com.oib.automation.TC015_Admin_EmployeeReg<br/>
+<a href="#Output-201036751" onClick='toggleBox("Output-201036751", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-201036751" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-201036751">
+Application Opened<br/>
+Login Completed<br/>
+Employee Registration Completed<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>64</td>
+<td>com.oib.automation.TC015_Admin_EmployeeReg@5136d012</td></tr>
+<tr>
+<td title='com.oib.automation.TC019_Admin_Fundtransfer.fundtransfer()'><b>fundtransfer</b><br>Test class: com.oib.automation.TC019_Admin_Fundtransfer<br/>
+<a href="#Output-1631826609" onClick='toggleBox("Output-1631826609", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1631826609" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1631826609">
+Application Opened<br/>
+Login Completed<br/>
+There is no Find Button<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>com.oib.automation.TC019_Admin_Fundtransfer@d6e7bab</td></tr>
+<tr>
+<td title='com.oib.automation.TC022_Admin_LoginPage_Links.links_loginpage()'><b>links_loginpage</b><br>Test class: com.oib.automation.TC022_Admin_LoginPage_Links<br/>
+<a href="#Output-1332064145" onClick='toggleBox("Output-1332064145", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1332064145" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1332064145">
+Application Opened<br/>
+[[ChromeDriver: chrome on WINDOWS (ec089aba12b453b46d66d6ec86a447b8)] -> tag name: a]http://183.82.103.245:8888/BankingProject/RecoverPasswordBuild1.jsp<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.oib.automation.TC022_Admin_LoginPage_Links@e1de817</td></tr>
+<tr>
+<td title='com.oib.automation.TC018_Admin_ViewCustomerLockedAcc.lockedacc()'><b>lockedacc</b><br>Test class: com.oib.automation.TC018_Admin_ViewCustomerLockedAcc<br/>
+<a href="#Output-1409004212" onClick='toggleBox("Output-1409004212", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1409004212" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1409004212">
+Application Opened<br/>
+Login Completed<br/>
+Test case is passed<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.oib.automation.TC018_Admin_ViewCustomerLockedAcc@5939a379</td></tr>
+<tr>
+<td title='com.oib.automation.TC001_AdminLogin.login()'><b>login</b><br>Test class: com.oib.automation.TC001_AdminLogin<br/>
+<a href="#Output-1735390128" onClick='toggleBox("Output-1735390128", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1735390128" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1735390128">
+Application Opened<br/>
+Login Completed<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.oib.automation.TC001_AdminLogin@62e7f11d</td></tr>
+<tr>
+<td title='com.oib.automation.TC024_Employee_Login.login()'><b>login</b><br>Test class: com.oib.automation.TC024_Employee_Login<br/>
+<a href="#Output-1661349610" onClick='toggleBox("Output-1661349610", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1661349610" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1661349610">
+Application Opened<br/>
+Login Completed<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.oib.automation.TC024_Employee_Login@2892dae4</td></tr>
+<tr>
+<td title='com.oib.automation.TC023_Verify_Title.title()'><b>title</b><br>Test class: com.oib.automation.TC023_Verify_Title<br/>
+<a href="#Output-1571580867" onClick='toggleBox("Output-1571580867", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1571580867" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1571580867">
+Application Opened<br/>
+Title is matched<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>com.oib.automation.TC023_Verify_Title@3541cb24</td></tr>
+<tr>
+<td title='com.oib.automation.TC025_Employee_VerifyTitle.title()'><b>title</b><br>Test class: com.oib.automation.TC025_Employee_VerifyTitle<br/>
+<a href="#Output-2147388034" onClick='toggleBox("Output-2147388034", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2147388034" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2147388034">
+Application Opened<br/>
+Login Completed<br/>
+Title is matched<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>com.oib.automation.TC025_Employee_VerifyTitle@2177849e</td></tr>
+<tr>
+<td title='com.oib.automation.TC005_Admin_ViewAccType.viewacctype()'><b>viewacctype</b><br>Test class: com.oib.automation.TC005_Admin_ViewAccType<br/>
+<a href="#Output-1258527853" onClick='toggleBox("Output-1258527853", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1258527853" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1258527853">
+Application Opened<br/>
+Login Completed<br/>
+View Account Type Records Displayed succesfull<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.oib.automation.TC005_Admin_ViewAccType@482bce4f</td></tr>
+<tr>
+<td title='com.oib.automation.TC006_Admin_ViewTypesDelete.viewacctype_delete()'><b>viewacctype_delete</b><br>Test class: com.oib.automation.TC006_Admin_ViewTypesDelete<br/>
+<a href="#Output-1046467249" onClick='toggleBox("Output-1046467249", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1046467249" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1046467249">
+Application Opened<br/>
+Login Completed<br/>
+View Account Type Record Delated succesfull<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.oib.automation.TC006_Admin_ViewTypesDelete@3315d2d7</td></tr>
+<tr>
+<td title='com.oib.automation.TC008_Admin_ViewBranchAccTypes.viewbrachacctypes()'><b>viewbrachacctypes</b><br>Test class: com.oib.automation.TC008_Admin_ViewBranchAccTypes<br/>
+<a href="#Output-646148183" onClick='toggleBox("Output-646148183", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-646148183" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-646148183">
+Application Opened<br/>
+Login Completed<br/>
+View Branch Account Types Search Succesfully<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>com.oib.automation.TC008_Admin_ViewBranchAccTypes@3972a855</td></tr>
+<tr>
+<td title='com.oib.automation.TC010_Admin_ViewServices.viewbranch()'><b>viewbranch</b><br>Test class: com.oib.automation.TC010_Admin_ViewServices<br/>
+<a href="#Output-1312250810" onClick='toggleBox("Output-1312250810", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1312250810" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1312250810">
+Application Opened<br/>
+Login Completed<br/>
+View Services Succesfull<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.oib.automation.TC010_Admin_ViewServices@366647c2</td></tr>
+<tr>
+<td title='com.oib.automation.TC017_Admin_ViewCustomers.viewcustomer()'><b>viewcustomer</b><br>Test class: com.oib.automation.TC017_Admin_ViewCustomers<br/>
+<a href="#Output-2042950203" onClick='toggleBox("Output-2042950203", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2042950203" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2042950203">
+Application Opened<br/>
+Login Completed<br/>
+View Customers Page should be displayed<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>com.oib.automation.TC017_Admin_ViewCustomers@4da4253</td></tr>
+<tr>
+<td title='com.oib.automation.TC016_Admin_ViewEmployees.viewemp()'><b>viewemp</b><br>Test class: com.oib.automation.TC016_Admin_ViewEmployees<br/>
+<a href="#Output-1762039910" onClick='toggleBox("Output-1762039910", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1762039910" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1762039910">
+Application Opened<br/>
+Login Completed<br/>
+Employee details should be displayed<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>com.oib.automation.TC016_Admin_ViewEmployees@29647f75</td></tr>
+<tr>
+<td title='com.oib.automation.TC011_Admin_ViewService_Delete.viewservice_delete()'><b>viewservice_delete</b><br>Test class: com.oib.automation.TC011_Admin_ViewService_Delete<br/>
+<a href="#Output-1652734453" onClick='toggleBox("Output-1652734453", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1652734453" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1652734453">
+Application Opened<br/>
+Login Completed<br/>
+View Services Succesfull<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.oib.automation.TC011_Admin_ViewService_Delete@55b53d44</td></tr>
+<tr>
+<td title='com.oib.automation.TC013_Admin_ViewServices.viewservices()'><b>viewservices</b><br>Test class: com.oib.automation.TC013_Admin_ViewServices<br/>
+<a href="#Output-83554804" onClick='toggleBox("Output-83554804", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-83554804" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-83554804">
+Application Opened<br/>
+Login Completed<br/>
+Test Case Is Passed<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.oib.automation.TC013_Admin_ViewServices@6a6afff2</td></tr>
+<tr>
+<td title='com.oib.automation.TC026_Employee_Verify_WelcomeText.welcome_verify()'><b>welcome_verify</b><br>Test class: com.oib.automation.TC026_Employee_Verify_WelcomeText<br/>
+<a href="#Output-183502806" onClick='toggleBox("Output-183502806", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-183502806" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-183502806">
+Application Opened<br/>
+Login Completed<br/>
+Not Diplayed Correct<br/>
+Logout Completed<br/>
+Application Closed<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.oib.automation.TC026_Employee_Verify_WelcomeText@6c779568</td></tr>
+</table><p>
+</body>
+</html>

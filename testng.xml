@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="OIB" verbose="1" >
+<test name="Regression">
+<packages>
+      <package name="com.oib.automation" />
+   </packages>
+</test>
+</suite>

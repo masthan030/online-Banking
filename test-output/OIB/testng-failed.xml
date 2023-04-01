@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OIB]">
+  <test name="Regression(failed)">
+    <classes>
+      <class name="com.oib.automation.TC_Admin_RetrieveData_ViewBranch">
+        <methods>
+          <include name="retrieve_data"/>
+        </methods>
+      </class> <!-- com.oib.automation.TC_Admin_RetrieveData_ViewBranch -->
+      <class name="com.oib.automation.TC012_Admin_BranchServices_Reg">
+        <methods>
+          <include name="branchreg"/>
+        </methods>
+      </class> <!-- com.oib.automation.TC012_Admin_BranchServices_Reg -->
+      <class name="com.oib.automation.TC021_Admin_Profile">
+        <methods>
+          <include name="view_profile"/>
+        </methods>
+      </class> <!-- com.oib.automation.TC021_Admin_Profile -->
+      <class name="com.oib.automation.TC004_AdminAccTypes">
+        <methods>
+          <include name="acctype"/>
+        </methods>
+      </class> <!-- com.oib.automation.TC004_AdminAccTypes -->
+      <class name="com.oib.automation.TC009_Admin_ServiceReg">
+        <methods>
+          <include name="servicereg"/>
+        </methods>
+      </class> <!-- com.oib.automation.TC009_Admin_ServiceReg -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [OIB] -->
